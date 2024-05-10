@@ -1,7 +1,7 @@
 -- A script that creates a trigger that resets the attribute valid_email only when the email has been changed.
 DELIMITER $$
 CREATE TRIGGER reset_attr_email
-AFTER UPDATE on users
+BEFORE UPDATE on users
 FOR EACH ROW
 BEGIN
      IF NEW.email != OLD.email
