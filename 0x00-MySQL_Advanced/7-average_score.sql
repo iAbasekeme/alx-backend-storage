@@ -1,11 +1,14 @@
---A script that creates a stored procedure
+-- A script that creates a stored procedure
 
+DROP PROCEDURE IF EXISTS ComputeAverageScoreForUser;
 DELIMITER $$
 CREATE PROCEDURE ComputeAverageScoreForUser(IN user_id INT)
     BEGIN
-        SELECT AVG(score) AS average_score
+	UPDATE users
+	SET average_score = (SELECT AVG(score)
         FROM corrections 
-        WHERE user_id
-        INTO average_score
+        WHERE corrections.user_id=user_id
+	);
+	WHERE id=user_id;
     END $$
 DELIMITER ;
