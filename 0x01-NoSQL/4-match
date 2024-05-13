@@ -1,0 +1,5 @@
+// A script that queries a collection based on equality conditions
+
+use my_db
+
+db.school.find( { "name": "Holberton school" } )
