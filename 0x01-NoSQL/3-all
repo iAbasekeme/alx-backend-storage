@@ -1,3 +1,5 @@
 // A script that shows all collections in database
 
+use my_db
+
 show collections
