@@ -1,2 +1,2 @@
 // A script that queries a collection based on equality conditions
-db.school.find({name: "Holberton school})
+db.school.find({name: "Holberton school}).pretty();
