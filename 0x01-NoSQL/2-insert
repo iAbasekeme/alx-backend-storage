@@ -1,6 +1,5 @@
 // A script that inserts into a collections
 
-use my_db
 
 db.school.insertOne(
     {
