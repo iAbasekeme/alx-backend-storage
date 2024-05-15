@@ -1,0 +1,1 @@
+In this directory we will be talking about redis and it's applications, at the end of this i shoukd be able to explain the following topics without having to look through google or any resource:
