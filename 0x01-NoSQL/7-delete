@@ -1,5 +1,2 @@
 // A script that delets all document with a specific filter
-
-use my_db
-
-db.school.deleteMany( { name: "Holberton school"} )
+db.school.deleteMany({ name: "Holberton school"});
