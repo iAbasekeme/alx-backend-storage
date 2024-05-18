@@ -6,8 +6,11 @@
 def schools_by_topic(mongo_collection, topic):
     """A function that finds all schools with a specific topic
     """
-    schools = []
-    all_schools = mongo_collection.find(topic)
-    for i in all_schools:
-        schools.append(i)
-    return schools
+    topic_filter = {
+        'topics': {
+            '$elemMatch': {
+                '$eq': topic,
+            },
+        },
+    }
+    return [doc for doc in mongo_collection.find(topic_filter)]
